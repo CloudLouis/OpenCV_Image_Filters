@@ -3,6 +3,7 @@ import numpy as np
 
 img = cv2.imread("picture.jpg")
 
+
 # 1) Edges
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 gray = cv2.medianBlur(gray, 5)

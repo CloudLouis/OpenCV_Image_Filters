@@ -14,7 +14,7 @@ def burnV2(image, mask):
 image = cv2.imread("picture.jpg")
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 inverted_image = 255 - gray_image
-blur_img = cv2.GaussianBlur(inverted_image, (21, 21), sigmaX=0, sigmaY=0)
+blur_img = cv2.GaussianBlur(inverted_image, (41, 41), sigmaX=0, sigmaY=0)
 final_image = dodgeV2(blur_img, gray_image)
 img_canvas = cv2.imread("canvas.jpg", cv2.IMREAD_GRAYSCALE)
 final_image = cv2.multiply(final_image, img_canvas, scale=1/256)
